@@ -60,6 +60,15 @@ body {
   letter-spacing: -0.03em;
 }
 .logo span { color: var(--accent); }
+.logo .version {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: #555;
+  letter-spacing: 0.05em;
+  position: relative;
+  top: -0.35em;
+}
 
 .nav { display: flex; align-items: center; gap: 2rem; }
 .nav a {
