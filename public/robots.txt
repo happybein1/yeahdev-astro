@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block admin or non-public paths (add as needed)
+Disallow: /404
+
+# Sitemap location
+Sitemap: https://yeahdev.com/sitemap.xml

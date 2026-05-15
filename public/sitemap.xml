@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://yeahdev.com/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://yeahdev.com/images/og-home.png</image:loc>
+      <image:title>YeahDev — Practical knowledge to build your business</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://yeahdev.com/articles/best-free-ai-video-tools-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <news:news>
+      <news:publication>
+        <news:name>YeahDev</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-11</news:publication_date>
+      <news:title>Top 5 AI Explainer Tools of 2026 (Ranked by Real-World Utility)</news:title>
+    </news:news>
+  </url>
+
+  <url>
+    <loc>https://yeahdev.com/articles/brand-image-campaigns-strategic-justification</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <news:news>
+      <news:publication>
+        <news:name>YeahDev</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-11</news:publication_date>
+      <news:title>Beyond the Click: Strategic Justification for Brand Image Campaigns</news:title>
+    </news:news>
+  </url>
+
+</urlset>

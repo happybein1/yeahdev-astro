@@ -1,0 +1,134 @@
+---
+import Base from '../layouts/Base.astro';
+
+const articles = [
+  {
+    href: '/articles/best-free-ai-video-tools-2026',
+    tag: 'AI Tools',
+    date: 'May 2026',
+    title: 'Top 5 AI Explainer Tools of 2026 (Ranked by Real-World Utility)',
+    excerpt: 'The "Wild West" of free AI video has been settled. Most tools now use credits — here\'s how to get the most out of each, and which ones still offer genuine daily or weekly free usage.',
+    live: true,
+    featured: true,
+  },
+  {
+    href: '/articles/brand-image-campaigns-strategic-justification',
+    tag: 'Marketing',
+    date: 'May 2026',
+    title: 'Beyond the Click: Strategic Justification for Brand Image Campaigns',
+    excerpt: 'The academic and economic case for why brand building — not just performance ads — is the most powerful lever for long-term growth and pricing power.',
+    live: true,
+    featured: false,
+  },
+  {
+    href: '#',
+    tag: 'Growth',
+    date: 'Coming Soon',
+    title: 'How to Get Your First 100 Customers Without Paid Ads',
+    excerpt: 'The playbook used by bootstrapped founders who turned zero budget into real traction.',
+    live: false,
+    featured: false,
+  },
+  {
+    href: '#',
+    tag: 'Automation',
+    date: 'Coming Soon',
+    title: 'Build a $5/Month Tech Stack That Scales to 10k Users',
+    excerpt: 'The exact tools and architecture to keep costs near zero while you validate your idea.',
+    live: false,
+    featured: false,
+  },
+];
+---
+
+<Base
+  title="YeahDev — Practical Knowledge to Build Your Business"
+  description="No fluff. No paywalls. Practical articles for founders, builders, and makers who want to grow their business."
+  ogType="website"
+>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">Est. 2026</div>
+      <h1 class="hero-headline">
+        Practical knowledge<br/>
+        <em>to build your business.</em>
+      </h1>
+      <p class="hero-sub">No fluff. No paywalls. Just straight-up useful articles for founders, builders, and makers.</p>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <main class="container" id="articles">
+
+    <div class="section-label">Latest Articles</div>
+
+    <div class="articles-grid">
+      {articles.map((a) => (
+        <article class={`card ${a.featured ? 'card--featured' : ''} ${!a.live ? 'card--placeholder' : ''}`}>
+          <div class="card-meta">
+            <span class="tag">{a.tag}</span>
+            <span class="date">{a.date}</span>
+          </div>
+          <h2 class="card-title">
+            {a.live ? <a href={a.href}>{a.title}</a> : a.title}
+          </h2>
+          <p class="card-excerpt">{a.excerpt}</p>
+          {a.live
+            ? <a href={a.href} class="read-more">Read Article →</a>
+            : <span class="read-more muted">Coming Soon</span>
+          }
+        </article>
+      ))}
+    </div>
+
+    <section class="topics-section" id="topics">
+      <div class="section-label">Topics We Cover</div>
+      <div class="topics-grid">
+        {['🎬 AI Tools','🚀 Growth','⚙️ Automation','💬 Marketing','💰 Revenue','🛠 Building','📊 Analytics','🧠 Strategy'].map(t => (
+          <div class="topic">{t}</div>
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+</Base>
+
+<style>
+  .hero { padding: clamp(4rem, 8vw, 7rem) 0 0; overflow: hidden; }
+  .hero-tag { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+  .hero-headline { font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+  .hero-headline em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: clamp(1rem, 1.3vw, 1.15rem); color: var(--ink-soft); max-width: 520px; font-weight: 300; margin-bottom: 3.5rem; }
+  .hero-rule { height: 3px; background: linear-gradient(90deg, var(--accent) 0%, var(--ink) 40%, transparent 100%); }
+
+  .section-label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-muted); padding: clamp(2.5rem, 5vw, 4rem) 0 1.25rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
+
+  .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); border: 1px solid var(--line); }
+
+  .card { padding: clamp(1.5rem, 3vw, 2.25rem); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); transition: background 0.25s; display: flex; flex-direction: column; gap: 0.75rem; }
+  .card:hover { background: var(--paper-off); }
+  .card--featured { grid-column: span 2; background: var(--ink); color: var(--paper); }
+  .card--featured:hover { background: #1c1c1c; }
+  .card--featured .card-title a { color: var(--paper); }
+  .card--featured .card-excerpt { color: #a09990; }
+  .card--featured .date { color: #666; }
+  .card--featured .read-more { color: var(--accent); }
+  .card--placeholder { opacity: 0.7; }
+  @media (max-width: 700px) { .card--featured { grid-column: span 1; } }
+
+  .card-meta { display: flex; align-items: center; gap: 0.75rem; }
+  .card-title { font-family: var(--font-display); font-size: clamp(1.15rem, 1.8vw, 1.45rem); font-weight: 700; line-height: 1.25; margin-top: 0.25rem; }
+  .card-title a { color: var(--ink); text-decoration: none; }
+  .card-title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .card-excerpt { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.6; flex: 1; }
+  .read-more { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; color: var(--accent); text-decoration: none; margin-top: auto; display: inline-block; transition: letter-spacing 0.2s; }
+  .read-more:hover { letter-spacing: 0.08em; }
+  .read-more.muted { color: var(--ink-muted); pointer-events: none; }
+
+  .topics-section { padding: clamp(3rem, 6vw, 5rem) 0; }
+  .topics-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+  .topic { font-size: 0.9rem; font-weight: 500; padding: 0.55em 1.1em; border: 1.5px solid var(--line); border-radius: 100px; background: var(--white); color: var(--ink-soft); transition: all 0.2s; cursor: default; }
+  .topic:hover { border-color: var(--accent); color: var(--accent); background: #fff5f0; }
+</style>

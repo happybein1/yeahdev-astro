@@ -1,0 +1,171 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  articleDate?: string;
+  articleTag?: string;
+  articleAuthor?: string;
+}
+
+const {
+  title,
+  description,
+  ogImage = '/images/og-home.png',
+  ogType = 'website',
+  canonicalUrl,
+  articleDate,
+  articleTag,
+  articleAuthor = 'YeahDev',
+} = Astro.props;
+
+const siteUrl = 'https://yeahdev.com';
+const canonical = canonicalUrl ?? siteUrl + Astro.url.pathname;
+const ogImageAbsolute = siteUrl + ogImage;
+
+const jsonLd = ogType === 'article'
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": title,
+      "description": description,
+      "datePublished": articleDate,
+      "image": ogImageAbsolute,
+      "author": { "@type": "Organization", "name": articleAuthor, "url": siteUrl },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YeahDev",
+        "url": siteUrl,
+        "logo": { "@type": "ImageObject", "url": siteUrl + "/images/og-home.png", "width": 1200, "height": 630 }
+      },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": canonical }
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "YeahDev",
+      "url": siteUrl,
+      "description": "Practical articles to help you build and grow your business.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "YeahDev",
+        "url": siteUrl,
+        "logo": { "@type": "ImageObject", "url": siteUrl + "/images/og-home.png", "width": 1200, "height": 630 }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": siteUrl + "/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    };
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={articleTag ? `${articleTag}, business, marketing, AI tools, yeahdev` : 'business articles, marketing strategy, AI tools, founders, builders'} />
+  <meta name="author" content="YeahDev" />
+  <link rel="canonical" href={canonical} />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Open Graph — image is exactly 1200×630 -->
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageAbsolute} />
+  <meta property="og:image:secure_url" content={ogImageAbsolute} />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="YeahDev — Practical knowledge to build your business" />
+  <meta property="og:site_name" content="YeahDev" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@yeahdev" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageAbsolute} />
+  <meta name="twitter:image:alt" content="YeahDev — Practical knowledge to build your business" />
+
+  <!-- Article-specific OG -->
+  {articleDate && <meta property="article:published_time" content={articleDate} />}
+  {articleDate && <meta property="article:modified_time" content={articleDate} />}
+  {articleTag && <meta property="article:tag" content={articleTag} />}
+  {ogType === 'article' && <meta property="article:author" content={siteUrl} />}
+  {ogType === 'article' && <meta property="article:section" content={articleTag ?? 'Business'} />}
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/global.css" />
+  {ogType === 'article' && <link rel="stylesheet" href="/styles/article.css" />}
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YT5223V63F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YT5223V63F');
+  </script>
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">yeah<span>dev</span></a>
+      <nav class="nav">
+        <div class="nav-dropdown">
+          <a href="/#articles" class="nav-dropdown-trigger">Articles <span class="nav-caret">▾</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="/articles/best-free-ai-video-tools-2026">Top 5 AI Explainer Tools of 2026</a>
+            <a href="/articles/brand-image-campaigns-strategic-justification">Beyond the Click: Brand Image Campaigns</a>
+          </div>
+        </div>
+        <a href="/#topics">Topics</a>
+        <a href="/#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer class="site-footer" id="about">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">yeah<span>dev</span></a>
+        <p>No-nonsense articles for people<br/>building something real.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/#articles">Articles</a>
+        <a href="/#topics">Topics</a>
+        <a href="https://happybein.com" target="_blank" rel="noopener">happybein.com</a>
+        <a href="mailto:happybein1@gmail.com">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 YeahDev. Free to read, always.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
