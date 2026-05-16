@@ -16,7 +16,7 @@ export const translations = {
     // Hero
     "hero.tag": "Est. 2026",
     "hero.headline1": "Practical knowledge",
-    "hero.headline2": "to build your business.",
+    "hero.headline2": "to build your initiative.",
     "hero.sub": "No fluff. No paywalls. Just straight-up useful articles for founders, builders, and makers.",
 
     // Homepage sections
@@ -42,7 +42,7 @@ export const translations = {
     "topic.strategy": "🧠 Strategy",
 
     // Footer
-    "footer.tagline": "No-nonsense articles for people building something real.",
+    "footer.tagline": "No-nonsense articles for people building their initiative.",
     "footer.copy": "© 2026 YeahDev. Free to read, always.",
     "footer.contact": "Contact",
 
@@ -76,7 +76,7 @@ export const translations = {
     // Hero
     "hero.tag": "Créé en 2026",
     "hero.headline1": "Des connaissances concrètes",
-    "hero.headline2": "pour bâtir votre entreprise.",
+    "hero.headline2": "pour bâtir votre initiative.",
     "hero.sub": "Pas de remplissage. Pas de paywalls. Des articles vraiment utiles pour les fondateurs, les créateurs et les bâtisseurs.",
 
     // Homepage sections
@@ -102,7 +102,7 @@ export const translations = {
     "topic.strategy": "🧠 Stratégie",
 
     // Footer
-    "footer.tagline": "Des articles sans détour pour ceux qui construisent quelque chose de réel.",
+    "footer.tagline": "Des articles sans détour pour ceux qui développent leur initiative.",
     "footer.copy": "© 2026 YeahDev. Gratuit à lire, toujours.",
     "footer.contact": "Contact",
 
