@@ -83,6 +83,30 @@ body {
 }
 .nav a:hover { color: var(--paper); }
 
+/* ---- Language Toggle ---- */
+.lang-toggle {
+  display: flex; align-items: center; gap: 0.3rem;
+  margin-left: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 0 0.1rem;
+}
+.lang-toggle-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #666;
+  padding: 0.3em 0.5em;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 3px;
+  line-height: 1;
+}
+.lang-toggle-btn:hover { color: var(--paper); }
+.lang-toggle-btn.active { color: var(--accent); }
+.lang-divider { color: #333; font-size: 0.7rem; user-select: none; }
+
 /* ---- Nav Dropdown ---- */
 .nav-dropdown { position: relative; }
 .nav-dropdown-trigger {

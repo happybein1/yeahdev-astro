@@ -4,46 +4,66 @@ import Base from '../layouts/Base.astro';
 const articles = [
   {
     href: '/articles/best-free-ai-video-tools-2026',
-    tag: 'AI Tools',
-    date: 'May 2026',
-    title: 'Top 5 AI Explainer Tools of 2026 (Ranked by Real-World Utility)',
-    excerpt: 'The "Wild West" of free AI video has been settled. Most tools now use credits — here\'s how to get the most out of each, and which ones still offer genuine daily or weekly free usage.',
+    tagKey: 'tag.aitools',
+    tagDefault: 'AI Tools',
+    dateKey: 'a1.date',
+    dateDefault: 'May 2026',
+    titleKey: 'nav.article1',
+    titleDefault: 'Top 5 AI Explainer Tools of 2026 (Ranked by Real-World Utility)',
+    excerptKey: 'a1.excerpt',
+    excerptDefault: 'The "Wild West" of free AI video has been settled. Most tools now use credits — here\'s how to get the most out of each, and which ones still offer genuine daily or weekly free usage.',
     live: true,
     featured: true,
   },
   {
     href: '/articles/high-volume-low-energy-video-guide-2026',
-    tag: 'AI Tools',
-    date: 'May 2026',
-    title: "The 2026 High-Volume 'Low-Energy' Video Guide",
-    excerpt: "All-in-one AI tools cap out fast. This modular stack — ElevenLabs, Pexels, and CapCut Desktop — produces unlimited, watermark-free, cinematic videos for $0 every month.",
+    tagKey: 'tag.aitools',
+    tagDefault: 'AI Tools',
+    dateKey: 'a2.date',
+    dateDefault: 'May 2026',
+    titleKey: 'nav.article2',
+    titleDefault: "The 2026 High-Volume 'Low-Energy' Video Guide",
+    excerptKey: 'a2.excerpt',
+    excerptDefault: "All-in-one AI tools cap out fast. This modular stack — ElevenLabs, Pexels, and CapCut Desktop — produces unlimited, watermark-free, cinematic videos for $0 every month.",
     live: true,
     featured: false,
   },
   {
     href: '/articles/brand-image-campaigns-strategic-justification',
-    tag: 'Marketing',
-    date: 'May 2026',
-    title: 'Beyond the Click: Strategic Justification for Brand Image Campaigns',
-    excerpt: 'The academic and economic case for why brand building — not just performance ads — is the most powerful lever for long-term growth and pricing power.',
+    tagKey: 'tag.marketing',
+    tagDefault: 'Marketing',
+    dateKey: 'a3.date',
+    dateDefault: 'May 2026',
+    titleKey: 'nav.article3',
+    titleDefault: 'Beyond the Click: Strategic Justification for Brand Image Campaigns',
+    excerptKey: 'a3.excerpt',
+    excerptDefault: 'The academic and economic case for why brand building — not just performance ads — is the most powerful lever for long-term growth and pricing power.',
     live: true,
     featured: false,
   },
   {
     href: '#',
-    tag: 'Growth',
-    date: 'Coming Soon',
-    title: 'How to Get Your First 100 Customers Without Paid Ads',
-    excerpt: 'The playbook used by bootstrapped founders who turned zero budget into real traction.',
+    tagKey: 'tag.growth',
+    tagDefault: 'Growth',
+    dateKey: 'home.comingsoon',
+    dateDefault: 'Coming Soon',
+    titleKey: 'cs.title1',
+    titleDefault: 'How to Get Your First 100 Customers Without Paid Ads',
+    excerptKey: 'cs.excerpt1',
+    excerptDefault: 'The playbook used by bootstrapped founders who turned zero budget into real traction.',
     live: false,
     featured: false,
   },
   {
     href: '#',
-    tag: 'Automation',
-    date: 'Coming Soon',
-    title: 'Build a $5/Month Tech Stack That Scales to 10k Users',
-    excerpt: 'The exact tools and architecture to keep costs near zero while you validate your idea.',
+    tagKey: 'tag.automation',
+    tagDefault: 'Automation',
+    dateKey: 'home.comingsoon',
+    dateDefault: 'Coming Soon',
+    titleKey: 'cs.title2',
+    titleDefault: 'Build a $5/Month Tech Stack That Scales to 10k Users',
+    excerptKey: 'cs.excerpt2',
+    excerptDefault: 'The exact tools and architecture to keep costs near zero while you validate your idea.',
     live: false,
     featured: false,
   },
@@ -58,45 +78,50 @@ const articles = [
 
   <section class="hero">
     <div class="container">
-      <div class="hero-tag">Est. 2026</div>
+      <div class="hero-tag" data-i18n="hero.tag">Est. 2026</div>
       <h1 class="hero-headline">
-        Practical knowledge<br/>
-        <em>to build your business.</em>
+        <span data-i18n="hero.headline1">Practical knowledge</span><br/>
+        <em data-i18n="hero.headline2">to build your business.</em>
       </h1>
-      <p class="hero-sub">No fluff. No paywalls. Just straight-up useful articles for founders, builders, and makers.</p>
+      <p class="hero-sub" data-i18n="hero.sub">No fluff. No paywalls. Just straight-up useful articles for founders, builders, and makers.</p>
     </div>
     <div class="hero-rule"></div>
   </section>
 
   <main class="container" id="articles">
 
-    <div class="section-label">Latest Articles</div>
+    <div class="section-label" data-i18n="home.latest">Latest Articles</div>
 
     <div class="articles-grid">
       {articles.map((a) => (
         <article class={`card ${a.featured ? 'card--featured' : ''} ${!a.live ? 'card--placeholder' : ''}`}>
           <div class="card-meta">
-            <span class="tag">{a.tag}</span>
-            <span class="date">{a.date}</span>
+            <span class="tag" data-i18n={a.tagKey}>{a.tagDefault}</span>
+            <span class="date" data-i18n={a.dateKey}>{a.dateDefault}</span>
           </div>
           <h2 class="card-title">
-            {a.live ? <a href={a.href}>{a.title}</a> : a.title}
+            {a.live ? <a href={a.href} data-i18n={a.titleKey}>{a.titleDefault}</a> : <span data-i18n={a.titleKey}>{a.titleDefault}</span>}
           </h2>
-          <p class="card-excerpt">{a.excerpt}</p>
+          <p class="card-excerpt" data-i18n={a.excerptKey}>{a.excerptDefault}</p>
           {a.live
-            ? <a href={a.href} class="read-more">Read Article →</a>
-            : <span class="read-more muted">Coming Soon</span>
+            ? <a href={a.href} class="read-more" data-i18n="home.readmore">Read Article →</a>
+            : <span class="read-more muted" data-i18n="home.comingsoon">Coming Soon</span>
           }
         </article>
       ))}
     </div>
 
     <section class="topics-section" id="topics">
-      <div class="section-label">Topics We Cover</div>
+      <div class="section-label" data-i18n="home.topics">Topics We Cover</div>
       <div class="topics-grid">
-        {['🎬 AI Tools','🚀 Growth','⚙️ Automation','💬 Marketing','💰 Revenue','🛠 Building','📊 Analytics','🧠 Strategy'].map(t => (
-          <div class="topic">{t}</div>
-        ))}
+        <div class="topic" data-i18n="topic.ai">🎬 AI Tools</div>
+        <div class="topic" data-i18n="topic.growth">🚀 Growth</div>
+        <div class="topic" data-i18n="topic.automation">⚙️ Automation</div>
+        <div class="topic" data-i18n="topic.marketing">💬 Marketing</div>
+        <div class="topic" data-i18n="topic.revenue">💰 Revenue</div>
+        <div class="topic" data-i18n="topic.building">🛠 Building</div>
+        <div class="topic" data-i18n="topic.analytics">📊 Analytics</div>
+        <div class="topic" data-i18n="topic.strategy">🧠 Strategy</div>
       </div>
     </section>
 

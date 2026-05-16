@@ -126,6 +126,8 @@ const jsonLd = ogType === 'article'
     gtag('js', new Date());
     gtag('config', 'G-YT5223V63F');
   </script>
+  <!-- i18n -->
+  <script type="module" src="/i18n/i18n.js"></script>
 
 </head>
 <body>
@@ -135,15 +137,22 @@ const jsonLd = ogType === 'article'
       <a href="/" class="logo">yeah<span>dev</span> <span class="version">v1.3</span></a>
       <nav class="nav">
         <div class="nav-dropdown">
-          <a href="/#articles" class="nav-dropdown-trigger">Articles <span class="nav-caret">▾</span></a>
+          <a href="/#articles" class="nav-dropdown-trigger"><span data-i18n="nav.articles">Articles</span> <span class="nav-caret">▾</span></a>
           <div class="nav-dropdown-menu">
-            <a href="/articles/best-free-ai-video-tools-2026">Top 5 AI Explainer Tools of 2026</a>
-            <a href="/articles/high-volume-low-energy-video-guide-2026">High-Volume "Low-Energy" Video Guide</a>
-            <a href="/articles/brand-image-campaigns-strategic-justification">Beyond the Click: Brand Image Campaigns</a>
+            <a href="/articles/best-free-ai-video-tools-2026" data-i18n="nav.article1">Top 5 AI Explainer Tools of 2026</a>
+            <a href="/articles/high-volume-low-energy-video-guide-2026" data-i18n="nav.article2">High-Volume "Low-Energy" Video Guide</a>
+            <a href="/articles/brand-image-campaigns-strategic-justification" data-i18n="nav.article3">Beyond the Click: Brand Image Campaigns</a>
           </div>
         </div>
-        <a href="/#topics">Topics</a>
-        <a href="/#about">About</a>
+        <a href="/#topics" data-i18n="nav.topics">Topics</a>
+        <a href="/#about" data-i18n="nav.about">About</a>
+
+        <!-- Language Toggle -->
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-toggle-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-toggle-btn" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -154,17 +163,17 @@ const jsonLd = ogType === 'article'
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="/" class="logo">yeah<span>dev</span></a>
-        <p>No-nonsense articles for people<br/>building something real.</p>
+        <p data-i18n="footer.tagline">No-nonsense articles for people building something real.</p>
       </div>
       <div class="footer-links">
-        <a href="/#articles">Articles</a>
-        <a href="/#topics">Topics</a>
+        <a href="/#articles" data-i18n="nav.articles">Articles</a>
+        <a href="/#topics" data-i18n="nav.topics">Topics</a>
         <a href="https://happybein.com" target="_blank" rel="noopener">happybein.com</a>
-        <a href="mailto:happybein1@gmail.com">Contact</a>
+        <a href="mailto:happybein1@gmail.com" data-i18n="footer.contact">Contact</a>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>© 2026 YeahDev. Free to read, always.</span>
+      <span data-i18n="footer.copy">© 2026 YeahDev. Free to read, always.</span>
     </div>
   </footer>
 
