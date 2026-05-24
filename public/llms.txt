@@ -1,0 +1,30 @@
+# YeahDev
+
+> YeahDev publishes practical, no-fluff guides for founders, builders, and makers who want to grow their initiative. Every article is free, written to be actionable, and covers the tools, strategies, and frameworks that actually work in 2026.
+
+## About
+
+YeahDev is a content initiative under [happybein.com](https://happybein.com). It focuses on three domains: AI-powered production tools, marketing strategy, and growth tactics — all aimed at people building something real without a large budget or team.
+
+The site is bilingual (English / French), static, and intentionally lean. No ads. No paywalls. No email gates.
+
+## Article Categories
+
+- **AI Tools** — Practical reviews and workflows for AI video, audio, and content production tools. Focus on free tiers, credit models, and high-volume production stacks.
+- **Marketing** — Strategy-level articles grounded in academic research and real-world frameworks. Topics include brand equity, perceived value, and performance vs. brand budget allocation.
+- **Growth** — Tactical guides for early-stage founders. Covers customer acquisition, automation, and lean tech stacks.
+
+## Published Articles
+
+- [Top 5 AI Explainer Tools of 2026 (Ranked by Real-World Utility)](https://yeahdev.com/articles/best-free-ai-video-tools-2026): Reviews InVideo AI, Kling AI 3.0, Visla, Sora 2, and Lumen5 — comparing their free tiers, credit reset models, and best use cases for script-to-video production.
+
+- [The 2026 High-Volume "Low-Energy" Video Guide](https://yeahdev.com/articles/high-volume-low-energy-video-guide-2026): A modular, fully-free production stack using ElevenLabs for voiceover, Pexels/Mixkit/Coverr for 4K stock footage, and CapCut Desktop for watermark-free editing — designed for unlimited monthly output.
+
+- [Beyond the Click: Strategic Justification for Brand Image Campaigns](https://yeahdev.com/articles/brand-image-campaigns-strategic-justification): Draws on Zeithaml (1988), Sheth et al. (1991), and Binet & Field's 60/40 rule to make the economic case for brand investment over pure performance marketing.
+
+- [How to Test Your SEO & OG Image (Fast, and in the Right Order)](https://yeahdev.com/articles/how-to-test-seo-og-2026): A 10-minute post-deploy checklist covering OG image validators (Meta Debugger, LinkedIn Inspector, OpenGraph.xyz, Telegram, Discord), core SEO tag testers, and realistic indexing timelines.
+
+## Optional
+
+- [Sitemap](https://yeahdev.com/sitemap.xml): Full list of published URLs with last-modified dates and change frequency.
+- [Homepage](https://yeahdev.com/): Article index with topic filters.
