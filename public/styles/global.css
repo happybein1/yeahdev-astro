@@ -167,7 +167,11 @@ body {
 .footer-bottom {
   padding: 1.25rem 0;
   font-family: var(--font-mono); font-size: 0.72rem; color: #555;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
 }
+.footer-by { color: #555; }
+.footer-by a { color: #888; text-decoration: none; transition: color 0.2s; }
+.footer-by a:hover { color: var(--paper); }
 
 @media (max-width: 600px) {
   .footer-inner { flex-direction: column; }
