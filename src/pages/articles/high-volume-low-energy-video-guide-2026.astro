@@ -41,7 +41,15 @@ import Base from '../../layouts/Base.astro';
         <p data-i18n-html="a2.p.pro">Install <a href="https://pinokio.computer" target="_blank" rel="noopener"><strong>Kokoro TTS via Pinokio</strong></a> — an open-source model that runs locally on your hardware. Zero character limits, zero cost.</p>
         <div class="award-badge" data-i18n-html="a2.award.pro">🏅 <strong>Best for Power Users</strong> — Truly unlimited narration, runs offline, no account needed</div>
 
-        <h2 data-i18n-html="a2.h2.2"><span class="num">02</span> The Visuals: Zero-Watermark Stock Directory</h2>
+        <h3 class="sub-heading" data-i18n="a2.subh.turboscribe">Bonus: Auto-SRT / Transcription — TurboScribe</h3>
+        <p data-i18n-html="a2.p.turboscribe">Once you have your voiceover file, you need an SRT subtitle file for your editor. <a href="https://turboscribe.ai" target="_blank" rel="noopener"><strong>TurboScribe</strong></a> transcribes audio or video to text with near-perfect accuracy and exports directly to <code>.srt</code>, <code>.vtt</code>, or <code>.txt</code>. The free tier gives you 3 transcriptions per day — enough for a steady daily publishing cadence without paying anything.</p>
+        <ul class="feature-list" data-i18n-html="a2.features.turboscribe">
+          <li><span class="feature-icon">✓</span> 3 free transcriptions per day — no monthly cap to exhaust</li>
+          <li><span class="feature-icon">✓</span> Exports to .srt, .vtt, .txt — directly importable into CapCut and Clipchamp</li>
+          <li><span class="feature-icon">✓</span> Near-perfect accuracy even with AI-generated voices</li>
+          <li><span class="feature-icon">✓</span> No watermark on exported subtitle files</li>
+          <li><span class="feature-icon warn">!</span> 3/day limit — batch your recordings to stay within the free quota</li>
+        </ul>
         <p data-i18n="a2.p2">Instead of waiting for an AI to generate a 5-second clip, download cinematic 4K footage instantly. These four sites offer unlimited downloads with no watermarks.</p>
         <div class="table-wrap">
           <table class="comparison-table">
@@ -56,14 +64,34 @@ import Base from '../../layouts/Base.astro';
         </div>
         <div class="callout callout--green"><div class="callout-label" data-i18n="label.workflow">High-Volume Workflow</div><p data-i18n-html="a2.callout.workflow">Spend 10 minutes downloading 20–30 clips based on your script's keywords <em>before</em> opening your editor. A buffer of footage makes assembly far faster than waiting for AI generations.</p></div>
 
-        <h2 data-i18n-html="a2.h2.3"><span class="num">03</span> The Assembler: CapCut Desktop</h2>
-        <p data-i18n-html="a2.p3">Avoid browser-based "AI Editors" that charge for exports. <a href="https://www.capcut.com" target="_blank" rel="noopener"><strong>CapCut Desktop</strong></a> is the industry standard for high-volume, free video production.</p>
+        <h2 data-i18n-html="a2.h2.3"><span class="num">03</span> The Assembler: CapCut Desktop or Clipchamp</h2>
+        <p data-i18n-html="a2.p3">Avoid browser-based "AI Editors" that charge for exports. Two desktop tools stand out for free, high-volume production: <a href="https://www.capcut.com" target="_blank" rel="noopener"><strong>CapCut Desktop</strong></a> and <a href="https://clipchamp.com" target="_blank" rel="noopener"><strong>Microsoft Clipchamp</strong></a>.</p>
+
+        <h3 class="sub-heading" data-i18n="a2.subh.capcut">CapCut Desktop</h3>
         <ul class="feature-list" data-i18n-html="a2.features.capcut">
           <li><span class="feature-icon">✓</span> 1080p and 4K exports with no watermark (avoid "Pro" tagged effects)</li>
           <li><span class="feature-icon">✓</span> Auto-Captions — one click synced subtitles</li>
           <li><span class="feature-icon">✓</span> A 90-second video finished in 15–20 minutes</li>
-          <li><span class="feature-icon warn">!</span> Avoid "Pro" badge effects — they export with a watermark</li>
+          <li><span class="feature-icon warn">!</span> Free tier is more limited than it appears — many effects and templates require Pro</li>
+          <li><span class="feature-icon warn">!</span> Avoid any "Pro" badge effects — they export with a watermark</li>
         </ul>
+
+        <h3 class="sub-heading" data-i18n="a2.subh.clipchamp">Clipchamp (Recommended Alternative)</h3>
+        <p data-i18n-html="a2.p.clipchamp"><a href="https://clipchamp.com" target="_blank" rel="noopener"><strong>Microsoft Clipchamp</strong></a> is built into Windows 11 and available free via browser. It's a cleaner, less cluttered experience than CapCut with no watermark on exports, no hidden Pro traps, and a straightforward timeline editor. For founders who just want to assemble footage + audio + captions without surprises, it's often the better default.</p>
+        <ul class="feature-list" data-i18n-html="a2.features.clipchamp">
+          <li><span class="feature-icon">✓</span> Free exports up to 1080p — no watermark, no tricks</li>
+          <li><span class="feature-icon">✓</span> Built into Windows 11 — no install needed</li>
+          <li><span class="feature-icon">✓</span> Auto-captions, transitions, and basic colour grading on free tier</li>
+          <li><span class="feature-icon">✓</span> Cleaner interface — less overwhelming than CapCut for beginners</li>
+          <li><span class="feature-icon warn">!</span> No 4K export on free tier (1080p max)</li>
+          <li><span class="feature-icon warn">!</span> Fewer advanced effects than CapCut</li>
+        </ul>
+
+        <div class="callout callout--blue">
+          <div class="callout-label" data-i18n="label.core">The Core Principle</div>
+          <p data-i18n="a2.assembler.tip">Use Clipchamp if you're on Windows and want zero friction. Use CapCut Desktop if you need more advanced effects — just stay away from anything tagged "Pro".</p>
+        </div>
+
         <blockquote data-i18n="a2.quote">Unlike the mobile app, the Desktop version allows high-res exports with no watermark on the free tier.</blockquote>
 
         <h2 data-i18n="a2.h2.why">Why the Modular Stack Beats All-in-One AI</h2>

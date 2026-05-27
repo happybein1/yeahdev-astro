@@ -18,7 +18,7 @@ The site is bilingual (English / French), static, and intentionally lean. No ads
 
 - [Top 5 AI Explainer Tools of 2026 (Ranked by Real-World Utility)](https://yeahdev.com/articles/best-free-ai-video-tools-2026): Reviews InVideo AI, Kling AI 3.0, Visla, Sora 2, and Lumen5 — comparing their free tiers, credit reset models, and best use cases for script-to-video production.
 
-- [The 2026 High-Volume "Low-Energy" Video Guide](https://yeahdev.com/articles/high-volume-low-energy-video-guide-2026): A modular, fully-free production stack using ElevenLabs for voiceover, Pexels/Mixkit/Coverr for 4K stock footage, and CapCut Desktop for watermark-free editing — designed for unlimited monthly output.
+- [The 2026 High-Volume "Low-Energy" Video Guide](https://yeahdev.com/articles/high-volume-low-energy-video-guide-2026): A modular, fully-free production stack using ElevenLabs for voiceover, TurboScribe for SRT/transcription, Pexels/Mixkit/Coverr for 4K stock footage, and CapCut Desktop or Clipchamp (recommended alternative, no hidden Pro traps) for watermark-free editing — designed for unlimited monthly output.
 
 - [Beyond the Click: Strategic Justification for Brand Image Campaigns](https://yeahdev.com/articles/brand-image-campaigns-strategic-justification): Draws on Zeithaml (1988), Sheth et al. (1991), and Binet & Field's 60/40 rule to make the economic case for brand investment over pure performance marketing.
 
