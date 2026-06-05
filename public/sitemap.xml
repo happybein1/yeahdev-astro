@@ -60,6 +60,21 @@
   </url>
 
   <url>
+    <loc>https://yeahdev.com/articles/best-free-news-sources-2026</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <news:news>
+      <news:publication>
+        <news:name>YeahDev</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-05</news:publication_date>
+      <news:title>Les Meilleures Sources d'Actualité 100 % Gratuites en 2026</news:title>
+    </news:news>
+  </url>
+
+  <url>
     <loc>https://yeahdev.com/articles/brand-image-campaigns-strategic-justification</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>

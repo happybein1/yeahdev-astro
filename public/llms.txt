@@ -22,6 +22,8 @@ The site is bilingual (English / French), static, and intentionally lean. No ads
 
 - [Beyond the Click: Strategic Justification for Brand Image Campaigns](https://yeahdev.com/articles/brand-image-campaigns-strategic-justification): Draws on Zeithaml (1988), Sheth et al. (1991), and Binet & Field's 60/40 rule to make the economic case for brand investment over pure performance marketing.
 
+- [Les Meilleures Sources d'Actualité 100 % Gratuites en 2026](https://yeahdev.com/articles/best-free-news-sources-2026): A bilingual (FR/EN) guide to the best paywall-free news sources — wire services (AP, Reuters), public broadcasters (Franceinfo, BBC, France 24), free pure players (The Guardian, Slate.fr), and aggregator tools (Google News, Flipboard, Feedly).
+
 - [How to Test Your SEO & OG Image (Fast, and in the Right Order)](https://yeahdev.com/articles/how-to-test-seo-og-2026): A 10-minute post-deploy checklist covering OG image validators (Meta Debugger, LinkedIn Inspector, OpenGraph.xyz, Telegram, Discord), core SEO tag testers, and realistic indexing timelines.
 
 ## Optional
