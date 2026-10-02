@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="Adding One of Our Apps to Your Home Screen (and Using It Offline) — YeahDev"
+  description="Every app we build — IntentFlow, ShopTools, and the rest — is a regular website that installs like a real app, no app store involved. A two-minute, screenshot-led walkthrough for iPhone (Safari) and Android (Chrome)."
+  ogType="article"
+  articleDate="2026-10-02"
+  articleTag="Resources"
+>
+  <main class="article-main">
+    <div class="article-container">
+
+      <div class="article-header">
+        <div class="breadcrumb"><a href="/" data-i18n="nav.home">Home</a> / <a href="/#articles" data-i18n="nav.articles">Articles</a></div>
+        <div class="article-meta">
+          <span class="tag" data-i18n="tag.resources">Resources</span>
+          <span class="date" data-i18n="a7.meta">October 2, 2026 · 3 min read</span>
+        </div>
+        <h1 class="article-title" data-i18n-html="a7.title">
+          Adding One of Our Apps to Your Home Screen<br/><em>(and Using It Offline)</em>
+        </h1>
+        <p class="article-lede" data-i18n="a7.lede">
+          Every app here — IntentFlow, ShopTools, and the rest — is a regular website that installs like a real app, with no app store involved. A two-minute, screenshot-led walkthrough for iPhone (Safari) and Android (Chrome).
+        </p>
+        <div class="article-rule"></div>
+      </div>
+
+      <div class="article-body">
+
+        <p data-i18n="a7.intro">Every app in this family is what's called a Progressive Web App (PWA): a regular website that can also be "installed" straight from the browser, with no app store, no download, and no account required. Once installed, it gets a real icon on your home screen, opens full-screen with no browser address bar, and keeps working even with no signal, since the app itself is cached on the device the first time you open it.</p>
+
+        <p data-i18n="a7.intro2">This is the same two-minute setup for every app here — the screenshots below happen to be IntentFlow, but the steps are identical for ShopTools or anything else in this family. There are two separate walkthroughs below: iPhone (Safari) and Android (Chrome). The browser matters — on iPhone specifically, this only works from Safari, not Chrome or any other browser, since only Safari exposes the "Add to Home Screen" option iOS needs.</p>
+
+        <h2 data-i18n-html="a7.h2.1"><span class="num">01</span> iPhone (Safari)</h2>
+
+        <ul class="feature-list" data-i18n-html="a7.ios.step1">
+          <li><span class="feature-icon">1</span> Open the app's link in <strong>Safari</strong>.</li>
+        </ul>
+
+        <img class="article-img" src="/images/articles/install-pwa/ios-open-in-safari.jpg" alt="An app open in Safari on iPhone, address bar visible at the top" />
+
+        <ul class="feature-list" data-i18n-html="a7.ios.steps2">
+          <li><span class="feature-icon">2</span> Tap the <strong>Share</strong> button (the square with an arrow pointing up) in Safari's toolbar.</li>
+          <li><span class="feature-icon">3</span> Scroll down the share sheet and tap <strong>Add to Home Screen</strong>.</li>
+          <li><span class="feature-icon">4</span> Tap <strong>Add</strong> in the top-right corner to confirm.</li>
+        </ul>
+
+        <img class="article-img" src="/images/articles/install-pwa/ios-share-add-to-home-screen.jpg" alt="iPhone Safari share sheet with Add to Home Screen highlighted" />
+
+        <p data-i18n="a7.ios.done">That's it — the app's own icon now sits on your home screen like any other app, and opening it from there launches it full-screen, with no Safari address bar.</p>
+
+        <h2 data-i18n-html="a7.h2.2"><span class="num">02</span> Android (Chrome)</h2>
+
+        <ul class="feature-list" data-i18n-html="a7.android.step1">
+          <li><span class="feature-icon">1</span> Open the app's link in <strong>Chrome</strong>.</li>
+          <li><span class="feature-icon">2</span> Tap the <strong>three-dot menu</strong> in the top-right corner.</li>
+        </ul>
+
+        <img class="article-img" src="/images/articles/install-pwa/android-menu-button.jpg" alt="Arrow pointing to Chrome's three-dot menu button in the top-right corner" />
+
+        <ul class="feature-list" data-i18n-html="a7.android.step2">
+          <li><span class="feature-icon">3</span> Tap <strong>Install and create shortcut</strong> (on some Chrome versions this reads "Add to Home screen" instead — same thing).</li>
+          <li><span class="feature-icon">4</span> Confirm the install prompt.</li>
+        </ul>
+
+        <img class="article-img" src="/images/articles/install-pwa/android-chrome-install-shortcut.jpg" alt="Android Chrome menu with Install and create shortcut highlighted" />
+
+        <p data-i18n="a7.android.done">Chrome will place the icon on your home screen (and usually in your app drawer too), and from then on it opens the same way any installed Android app does.</p>
+
+        <h2 data-i18n-html="a7.h2.3"><span class="num">03</span> Once It's Installed</h2>
+
+        <p data-i18n="a7.p.once">Open it from the home screen icon rather than typing the address into a browser again — that's what gives you the full-screen, no-address-bar experience and lets it work offline. The very first open still needs an internet connection (so the app itself can be downloaded and cached), but every open after that works with no signal at all, since the app, its icons, and its logic are all stored on the device.</p>
+
+        <div class="callout callout--gold">
+          <div class="callout-label" data-i18n="label.onething">💡 One Thing to Know</div>
+          <p data-i18n="a7.callout.update">None of these apps auto-update in the background the instant a new version ships. The app checks for a new version each time you open it, so if something looks out of date, closing and reopening it (or using the in-app "Refresh app" option, where available) is usually all that's needed.</p>
+        </div>
+
+      </div>
+
+      <div class="article-footer">
+        <a href="/" class="back-link" data-i18n="article.back">← Back to all articles</a>
+      </div>
+
+    </div>
+  </main>
+</Base>
+
+<style>
+  .article-img {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 1.25rem auto 1.75rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+</style>
