@@ -237,7 +237,7 @@ const jsonLd = ogType === 'article'
   if (!stored || wantsOpen) ready(show);
 })(window, document);
 </script>
-  <!-- GA4 config, with the owner-traffic marker (yv-internal v3; source: _shared/internal.js) -->
+  <!-- GA4 config, with the owner-traffic marker (yv-internal v4; source: _shared/internal.js) -->
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -256,7 +256,7 @@ const jsonLd = ogType === 'article'
       gtag('config', 'G-TJFL5YQ705', internal ? { anonymize_ip: true, traffic_type: 'internal' } : { anonymize_ip: true });
       if (internal) gtag('set', 'user_properties', { internal_user: 'true' });
       var here = p.slice(-2).join('.');
-      var CF = { 'happybein.com': 'bc29302dbc214188aebf56490bf4cef4', 'yeahdev.com': 'eb13518849014d5e9fd376c4202f3432' }[here];
+      var CF = { 'happybein.com': 'bc29302dbc214188aebf56490bf4cef4', 'yeahdev.com': 'eb13518849014d5e9fd376c4202f3432', 'yeahvibe.com': '55aea6e64e384cf7b021e272ff38d389' }[here];
       if (CF && !internal) {
         var b = d.createElement('script');
         b.defer = true; b.src = 'https://static.cloudflareinsights.com/beacon.min.js';
@@ -268,6 +268,16 @@ const jsonLd = ogType === 'article'
       var A = 'style="color:#6fdcd8"';
       function pill() {
         if (!internal) return;
+        var v = d.querySelector('#version-refresh, .yv-version, .header-version, .ver, .version');
+        if (v) {
+          var cs = w.getComputedStyle(v), dot = d.createElement('span');
+          if (cs.position === 'static') v.style.position = 'relative';
+          dot.setAttribute('aria-hidden', 'true');
+          dot.style.cssText = 'position:absolute;left:50%;top:calc(100% - ' + (parseFloat(cs.paddingBottom) || 0) + 'px + 1px);width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#2ABFBF;pointer-events:none';
+          v.appendChild(dot);
+          v.title = (v.title ? v.title + ' · ' : '') + 'Internal: your visits are not counted in the analytics';
+          return;
+        }
         var b = d.createElement('button');
         b.type = 'button';
         b.innerHTML = '&#9679; internal';
@@ -300,7 +310,7 @@ const jsonLd = ogType === 'article'
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">yeah<span>dev</span> <span class="version">v2.7</span></a>
+      <a href="/" class="logo">yeah<span>dev</span> <span class="version">v2.8</span></a>
       <nav class="nav">
         <div class="nav-dropdown">
           <a href="/#articles" class="nav-dropdown-trigger"><span data-i18n="nav.articles">Articles</span> <span class="nav-caret">▾</span></a>
