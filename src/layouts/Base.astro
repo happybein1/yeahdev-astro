@@ -256,7 +256,7 @@ const jsonLd = ogType === 'article'
       gtag('config', 'G-TJFL5YQ705', internal ? { anonymize_ip: true, traffic_type: 'internal' } : { anonymize_ip: true });
       if (internal) gtag('set', 'user_properties', { internal_user: 'true' });
       var here = p.slice(-2).join('.');
-      var CF = { 'happybein.com': 'bc29302dbc214188aebf56490bf4cef4' }[here];
+      var CF = { 'happybein.com': 'bc29302dbc214188aebf56490bf4cef4', 'yeahdev.com': 'eb13518849014d5e9fd376c4202f3432' }[here];
       if (CF && !internal) {
         var b = d.createElement('script');
         b.defer = true; b.src = 'https://static.cloudflareinsights.com/beacon.min.js';
@@ -300,7 +300,7 @@ const jsonLd = ogType === 'article'
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">yeah<span>dev</span> <span class="version">v2.6</span></a>
+      <a href="/" class="logo">yeah<span>dev</span> <span class="version">v2.7</span></a>
       <nav class="nav">
         <div class="nav-dropdown">
           <a href="/#articles" class="nav-dropdown-trigger"><span data-i18n="nav.articles">Articles</span> <span class="nav-caret">▾</span></a>
