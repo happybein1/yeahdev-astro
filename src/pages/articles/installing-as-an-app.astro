@@ -29,6 +29,16 @@ import Base from '../../layouts/Base.astro';
 
       <div class="article-body">
 
+        <!-- v2.10 (owner): the same steps as a 1-minute video (English, subtitles). Made with the
+             HappyBein video tools (happybein-astro/tools/video, product.html?p=pwa). -->
+        <figure class="article-video">
+          <video controls preload="none" playsinline width="1280" height="720" poster="/video/installing-apps.en.jpg?v=2.10" aria-label="Video: how to install one of our apps on iPhone and Android, and use it offline">
+            <source src="/video/installing-apps.en.mp4?v=2.10" type="video/mp4" />
+            <track kind="subtitles" srclang="en" label="English" src="/video/installing-apps.en.en.vtt?v=2.10" />
+          </video>
+          <figcaption>The same steps in a 1-minute video (English, with subtitles).</figcaption>
+        </figure>
+
         <p data-i18n="a7.intro">Every app in this family is what's called a Progressive Web App (PWA): a regular website that can also be "installed" straight from the browser, with no app store, no download, and no account required. Once installed, it gets a real icon on your home screen, opens full-screen with no browser address bar, and keeps working even with no signal, since the app itself is cached on the device the first time you open it.</p>
 
         <p data-i18n="a7.intro2">This is the same two-minute setup for every app here — the screenshots below happen to be IntentFlow, but the steps are identical for ShopTools or anything else in this family. There are two separate walkthroughs below: iPhone (Safari) and Android (Chrome). The browser matters — on iPhone specifically, this only works from Safari, not Chrome or any other browser, since only Safari exposes the "Add to Home Screen" option iOS needs.</p>
@@ -89,6 +99,9 @@ import Base from '../../layouts/Base.astro';
 </Base>
 
 <style>
+  .article-video { margin: 0 0 2rem; }
+  .article-video video { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); background: #000; }
+  .article-video figcaption { font-size: 0.85rem; color: var(--ink-muted); text-align: center; margin-top: 0.5rem; }
   .article-img {
     display: block;
     width: 100%;
